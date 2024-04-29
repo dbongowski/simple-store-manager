@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt_01.InventoryController">
+   <top>
+      <VBox prefHeight="53.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar prefHeight="26.0" prefWidth="600.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#aboutMenuItemOnAction" text="About" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="DarkMode">
+                     <items>
+                        <CheckMenuItem fx:id="darkModeButton" mnemonicParsing="false" onAction="#enableDarkMode" selected="true" text="Enable" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#add" prefHeight="40.0" prefWidth="50.0" text="+">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="editButtton" layoutX="15.0" layoutY="15.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#edit" prefHeight="40.0" prefWidth="50.0" text="Edit">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="338.0" text="     Inventory" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="refreshButton" layoutX="501.0" layoutY="15.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="50.0" text="↺">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteButton" layoutX="75.0" layoutY="15.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="70.0" text="Delete">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="inventoryTable" prefHeight="289.0" prefWidth="600.0">
+              <columns>
+                  <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="productName" prefWidth="118.40001678466797" style="-fx-alignment: CENTER;" text="product_name" />
+                <TableColumn fx:id="quantityOnHand" prefWidth="121.00006103515625" style="-fx-alignment: CENTER;" text="quantity_on_hand" />
+                  <TableColumn fx:id="reorderPoint" prefWidth="118.5999755859375" style="-fx-alignment: CENTER;" text="reorder_point" />
+                  <TableColumn fx:id="price" prefWidth="73.4000244140625" style="-fx-alignment: CENTER;" text="price" />
+                  <TableColumn prefWidth="90.40005493164062" />
+              </columns>
+            </TableView>
+            <GridPane prefHeight="69.0" prefWidth="600.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="mainMenuButton" alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="32.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openMainMenu" prefHeight="80.0" prefWidth="217.0" text="Main Menu" textAlignment="CENTER">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="ordersButton" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="22.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openOrders" prefHeight="80.0" prefWidth="217.0" text="Orders" textAlignment="CENTER" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

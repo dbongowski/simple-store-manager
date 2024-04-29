@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt_01.AboutController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: TOP-CENTER;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="172.0" prefWidth="260.0" text="After a successful login, you will see sales statistics from the past week. If you click on the Orders button, you will see details about the orders. In the Inventory section, you can manage warehouse products, edit, add, and remove them from the database. Be sure to refresh the table after making any changes." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Label>
+            <Label text="Created by Dominik Bongowski">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin></Label>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
