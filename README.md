@@ -15,8 +15,8 @@ Simple Store Manager is a Java application designed to streamline the management
 
 **IDE:** Intellij IDEA Comunity Edition  
 **Runtime:** jdk-17.0.1  
-**Additional drivers:** mysql-connector-j-8.0.33.jar  
-**Libraries:** javafx
+**Additional drivers:** mysql-connector-j-8.0.33  
+**Additional libraries:** javafx
 
 
 ## Preview
